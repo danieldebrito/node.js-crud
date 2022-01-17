@@ -1,0 +1,35 @@
+<%- include ../layout/cabecera.ejs %>
+
+  <div class="container">
+    <div class="p-3">
+      <a class="btn btn-primary btn-sm " href="/libros/crear" role="button"> ADD </a>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for( let i=0; i < libros.length; i++ ) { %>
+          <tr>
+            <th scope="row">
+              <%=libros[i].id %>
+            </th>
+            <td>
+              <%=libros[i].nombre %>
+            </td>
+            <td>
+              <%=libros[i].imagen %>
+            </td>
+            <td>editar | borrar</td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+
+  <%- include ../layout/footer.ejs %>

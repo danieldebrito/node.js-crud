@@ -1,0 +1,30 @@
+<%- include ../layout/cabecera.ejs %>
+
+  <div class="container p-2 mt-3">
+
+    <form class="row g-3 needs-validation form-control" action="/libros" method="POST" y enctype="multipart/form-data">
+
+      <div class="col-md-9">
+        <label for="validationCustom01" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="validationCustom01" value="Mark" name="nombre" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <label for="validationCustom02" class="form-label">Imagen</label>
+        <input type="file" class="form-control" id="validationCustom02" name="archivo" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+      </div>
+    </form>
+
+  </div>
+
+  <%- include ../layout/footer.ejs %>
