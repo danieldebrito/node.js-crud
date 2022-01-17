@@ -22,6 +22,6 @@ var cargar = multer({
 
 router.get("/", librosController.index);
 router.get("/crear", librosController.crear);
-router.post("/", cargar.single("archivo"), librosController.guardar); // archivo es el nombre del form
+router.post("/", cargar.single("archivo"), librosController.guardar); // 'archivo' es el nombre del form
 
 module.exports = router;

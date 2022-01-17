@@ -13,8 +13,8 @@ module.exports = {
     res.render('libros/crear')
   },
   guardar: function (req, res) {
-    element.set(conexion, req.body, function (err) {      
-      // res.redirect('/libros/');
+    element.set(conexion, req.body,req.file, function (err) {      
+      res.redirect('/libros/');
     });
 
   }
